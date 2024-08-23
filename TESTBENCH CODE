@@ -1,0 +1,33 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 25.07.2024 14:58:49
+// Design Name: 
+// Module Name: Test_bench
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Test_benc;
+reg a,b,cin;
+wire carry,sum;
+Adder UUT(a,b,cin,sum,carry);
+
+
+initial
+begin
+a=0;b=0;cin=0;
+#3 a=0;b=0;cin=1;
+#3 a=0;b=1;cin=1;
